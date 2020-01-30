@@ -1,0 +1,103 @@
+Conceito de repositorio distribuido
+
+git config --list
+git config --global user.name "Douglas Ferreira"
+git config --globl user.email "douglas.ferreira@totvs.com.br"
+git push --set-upstream origin master (fazer upload do seu repositorio)
+git pull origin - funcionou
+gitignore - um arquivo informar arquivos para ignorar pois nao precisam subir 
+
+escopos:
+system
+global
+local
+
+git remote -v (para ver os repostitorios)
+
+ssh-keygen (gera chaves)
+bitbucket (site de repositorios)
+gitlab tambem
+azure devops tambem
+
+tag usado para indicar a versao
+
+bom fazer pequenos commits
+
+operacoes remotas
+  clone - tira uma copia do repositorio central
+  ls-remote
+  fetch (atualiza o repositorio local, nao funcionou)
+    p/ funcionar precisa fazer o merge
+    ex. git fetch --all
+        git merge
+  pull(atualiza o repositorio e a area de trabalho fazendo merge)
+     ex. git pull origin master
+  push (check-in)
+     git push -u origin master
+
+git branch -a (ver as branches criadas)
+
+git commmit -a -m  "alteacoes" (com -a inclui na index e da commit, mas nao funciona para arquivos novos)
+-m=mensagem
+
+git log -10
+
+git status
+git status -s (shortcut)
+git pull
+git stash apply
+git add
+
+stash - volta o codigo original salvando as alteracoes
+index - para ver o que vai comitar
+
+
+git reset arquivo (para tirar o arquivo da index)
+git rm (tira e exclui o arquivo)
+
+git add --all (comita todos os arquivos da index)
+
+git rm "arquivo" --cached (apenas remove da index)
+
+git stash save 
+git stash apply 0 (aplica a id 0)
+
+git branch -a (lista todas)
+git checkout -b develop (cria de muda para develop)
+
+git revert <sha> para desfazer um checkin      - computador remoto
+  precisa fazer um novo checkin
+git stash - para desfazer antes do checkin
+git reset HEAD~1 para desfazer o ultimo commit - computador local
+git rebase
+
+git merge --squash
+
+git help tutorial
+
+head é o ultimo commit feito, normalmente com o nome da branch
+
+learninggitbranching.js.org
+
+https://git-scm.com/book/pt-br/v2 (muito bom e em portugues)
+
+try.github.io
+
+github.com/globocom
+github.com/loiane
+
+Excluir uma branch
+git branch -d <nome>
+
+fork - uma copia do repositorio
+
+Criando um projeto na nuvem GIT	:
+Entrar git-scm.com
+fazer o download p/ windows
+ou get apt git p/ linux
+criar usr e logar
+git mergetool -> Resolver conflitos de merge
+  
+Erros:
+  Erro com git clone, ao colar vem caracteres invalidos, digite o endereco
+
